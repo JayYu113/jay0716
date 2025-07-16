@@ -4,17 +4,406 @@
 
 ## 📋 目录
 
-- [项目介绍](#项目介绍)
-- [功能特性](#功能特性)
-- [快速开始](#快速开始)
-- [部署到GitHub Pages](#部署到github-pages)
-- [内容修改指南](#内容修改指南)
-- [自定义样式](#自定义样式)
-- [项目结构](#项目结构)
-- [技术栈](#技术栈)
-- [浏览器支持](#浏览器支持)
-- [贡献指南](#贡献指南)
-- [许可证](#许可证)
+- [📝 内容修改指南](#-内容修改指南)
+- [🎯 项目介绍](#-项目介绍)
+- [✨ 功能特性](#-功能特性)
+- [🚀 快速开始](#-快速开始)
+- [🌐 部署到GitHub Pages](#-部署到github-pages)
+- [🎨 自定义样式](#-自定义样式)
+- [📁 项目结构](#-项目结构)
+- [🛠️ 技术栈](#️-技术栈)
+- [🌐 浏览器支持](#-浏览器支持)
+- [🤝 贡献指南](#-贡献指南)
+- [📄 许可证](#-许可证)
+
+## 📝 内容修改指南
+
+### 📄 `index.html` 文件修改指南
+
+这是网站的主文件，包含所有页面内容。以下是各个部分的具体修改位置：
+
+#### 1. 网站基本信息（第1-25行）
+```html
+<!-- 修改网站标题 -->
+<title>你的名字 - Personal Portfolio</title>
+
+<!-- 修改网站图标 -->
+<link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+<!-- 修改字体（可选） -->
+<link href="https://fonts.googleapis.com/css2?family=你的字体:wght@300;400;500;600&display=swap" rel="stylesheet">
+```
+
+#### 2. 侧边栏个人信息（第35-60行）
+```html
+<!-- 修改头像 -->
+<img src="./assets/images/my-avatar.png" alt="你的名字" width="80">
+
+<!-- 修改姓名和职位 -->
+<h1 class="name" title="你的名字">你的名字</h1>
+<p class="title">你的职位</p>
+```
+
+#### 3. 联系信息（第70-120行）
+```html
+<!-- 邮箱 -->
+<a href="mailto:你的邮箱@example.com" class="contact-link">你的邮箱@example.com</a>
+
+<!-- 电话 -->
+<a href="tel:+你的电话号码" class="contact-link">+你的电话号码</a>
+
+<!-- 生日 -->
+<time datetime="你的生日">你的生日</time>
+
+<!-- 地址 -->
+<address>你的城市，你的国家</address>
+```
+
+#### 4. 社交媒体链接（第130-150行）
+```html
+<!-- 修改社交媒体链接 -->
+<li class="social-item">
+  <a href="https://github.com/你的用户名" class="social-link">
+    <ion-icon name="logo-github"></ion-icon>
+  </a>
+</li>
+<li class="social-item">
+  <a href="https://linkedin.com/in/你的用户名" class="social-link">
+    <ion-icon name="logo-linkedin"></ion-icon>
+  </a>
+</li>
+```
+
+#### 5. 导航菜单（第170-190行）
+```html
+<!-- 可以修改导航菜单项 -->
+<li class="navbar-item">
+  <button class="navbar-link active" data-nav-link>关于我</button>
+</li>
+<li class="navbar-item">
+  <button class="navbar-link" data-nav-link>简历</button>
+</li>
+```
+
+#### 6. 关于我部分（第203-300行）
+```html
+<!-- 个人介绍文字 -->
+<section class="about-text">
+  <p>在这里写你的个人介绍...</p>
+  <p>继续写更多关于你的信息...</p>
+</section>
+
+<!-- 技能/服务部分 -->
+<li class="service-item">
+  <div class="service-icon-box">
+    <img src="./assets/images/icon-dev.svg" alt="web development icon" width="40">
+  </div>
+  <div class="service-content-box">
+    <h4 class="h4 service-item-title">Web Development</h4>
+    <p class="service-item-text">描述你的技能和服务...</p>
+  </div>
+</li>
+```
+
+#### 7. 简历部分（第514-706行）
+```html
+<!-- 工作经验 -->
+<li class="timeline-item">
+  <h4 class="h4 timeline-item-title">职位名称</h4>
+  <span>2020 — 2023</span>
+  <p class="timeline-text">工作描述和成就...</p>
+</li>
+
+<!-- 教育背景 -->
+<li class="timeline-item">
+  <h4 class="h4 timeline-item-title">学位名称</h4>
+  <span>2016 — 2020</span>
+  <p class="timeline-text">学校名称和所学专业...</p>
+</li>
+
+<!-- 技能进度条 -->
+<div class="skill-progress-bg">
+  <div class="skill-progress-fill" style="width: 90%"></div>
+</div>
+```
+
+#### 8. 作品集部分（第707-946行）
+```html
+<!-- 添加新项目 -->
+<li class="project-item active" data-filter-item data-category="web development">
+  <a href="#">
+    <figure class="project-img">
+      <div class="project-item-icon-box">
+        <ion-icon name="eye-outline"></ion-icon>
+      </div>
+      <img src="./assets/images/project-1.jpg" alt="项目名称" loading="lazy">
+    </figure>
+    <h3 class="project-title">项目名称</h3>
+    <p class="project-category">Web Development</p>
+  </a>
+</li>
+```
+
+#### 9. 博客部分（第947-1138行）
+```html
+<!-- 添加博客文章 -->
+<li class="blog-post-item">
+  <a href="#">
+    <figure class="blog-banner-box">
+      <img src="./assets/images/blog-1.jpg" alt="文章标题" loading="lazy">
+    </figure>
+    <div class="blog-content">
+      <div class="blog-meta">
+        <p class="blog-category">技术</p>
+        <span class="dot"></span>
+        <time datetime="2023-12-01">Dec 1, 2023</time>
+      </div>
+      <h3 class="h3 blog-item-title">文章标题</h3>
+      <p class="blog-text">文章摘要...</p>
+    </div>
+  </a>
+</li>
+```
+
+#### 10. 联系表单（第1139-1201行）
+```html
+<!-- 配置表单功能 -->
+<form action="https://formspree.io/f/你的表单ID" method="POST" class="contact-form" data-form>
+  <div class="input-wrapper">
+    <input type="text" name="name" class="form-input" placeholder="姓名" required data-form-input>
+    <input type="email" name="email" class="form-input" placeholder="邮箱地址" required data-form-input>
+  </div>
+  <textarea name="message" class="form-input" placeholder="你的消息" required data-form-input></textarea>
+  <button class="form-btn" type="submit" disabled data-form-btn>
+    <ion-icon name="paper-plane"></ion-icon>
+    <span>发送消息</span>
+  </button>
+</form>
+```
+
+### 📁 `assets/` 文件夹修改指南
+
+#### 📂 `assets/images/` 文件夹
+
+这个文件夹包含网站的所有图片资源：
+
+##### 个人相关图片
+- **`my-avatar.png`** - 你的个人头像（建议尺寸：150x150px）
+- **`avatar-1.png` 到 `avatar-4.png`** - 推荐人/客户头像
+
+##### 项目图片
+- **`project-1.jpg` 到 `project-9.png`** - 作品集项目图片
+  - 建议尺寸：400x300px
+  - 格式：JPG或PNG
+  - 可以替换为你自己的项目截图
+
+##### 博客图片
+- **`blog-1.jpg` 到 `blog-6.jpg`** - 博客文章封面图
+  - 建议尺寸：400x250px
+  - 可以替换为你的博客文章配图
+
+##### 图标文件
+- **`icon-app.svg`** - 应用程序开发图标
+- **`icon-design.svg`** - 设计图标
+- **`icon-dev.svg`** - 开发图标
+- **`icon-photo.svg`** - 摄影图标
+- **`icon-quote.svg`** - 引用图标
+
+##### 品牌Logo
+- **`logo.ico`** - 网站图标（浏览器标签页显示）
+- **`logo.svg`** - SVG格式的Logo
+- **`logo-1-color.png` 到 `logo-6-color.png`** - 客户Logo展示
+
+#### 📂 `assets/css/` 文件夹
+
+##### `style.css` 文件修改指南
+
+这是网站的主要样式文件，包含所有CSS样式：
+
+###### 颜色主题修改（第15-80行）
+```css
+:root {
+  /* 主色调 - 修改这些颜色来改变网站主题 */
+  --orange-yellow-crayola: hsl(45, 100%, 72%);  /* 主色调 */
+  --vegas-gold: hsl(45, 54%, 58%);              /* 次要色调 */
+  
+  /* 背景色 */
+  --eerie-black-1: hsl(240, 2%, 13%);           /* 主背景 */
+  --eerie-black-2: hsl(240, 2%, 12%);           /* 次要背景 */
+  --smoky-black: hsl(0, 0%, 7%);                /* 页面背景 */
+  
+  /* 文字颜色 */
+  --white-1: hsl(0, 0%, 100%);                  /* 主要文字 */
+  --white-2: hsl(0, 0%, 98%);                   /* 次要文字 */
+  --light-gray: hsl(0, 0%, 84%);                /* 灰色文字 */
+}
+```
+
+###### 字体修改（第85-95行）
+```css
+:root {
+  /* 字体设置 */
+  --ff-poppins: '你的字体', sans-serif;         /* 主要字体 */
+  
+  /* 字体大小 */
+  --fs-1: 24px;  /* 大标题 */
+  --fs-2: 18px;  /* 中标题 */
+  --fs-3: 17px;  /* 小标题 */
+  --fs-4: 16px;  /* 正文 */
+  --fs-5: 15px;  /* 小字 */
+  --fs-6: 14px;  /* 更小字 */
+}
+```
+
+###### 布局修改
+- **侧边栏样式**（第317-450行）：修改侧边栏的宽度、高度、背景等
+- **主内容区域**（第1320-1350行）：修改内容区域的布局
+- **响应式设计**（第1236-1882行）：修改不同屏幕尺寸下的显示效果
+
+#### 📂 `assets/js/` 文件夹
+
+##### `script.js` 文件修改指南
+
+这个文件包含网站的交互功能：
+
+###### 侧边栏功能（第8-12行）
+```javascript
+// 侧边栏切换功能
+const sidebar = document.querySelector("[data-sidebar]");
+const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+sidebarBtn.addEventListener("click", function () { 
+  elementToggleFunc(sidebar); 
+});
+```
+
+###### 页面导航功能（第140-159行）
+```javascript
+// 页面导航功能
+const navigationLinks = document.querySelectorAll("[data-nav-link]");
+const pages = document.querySelectorAll("[data-page]");
+
+// 可以在这里添加自定义的页面切换逻辑
+```
+
+###### 表单验证功能（第120-139行）
+```javascript
+// 联系表单验证
+const form = document.querySelector("[data-form]");
+const formInputs = document.querySelectorAll("[data-form-input]");
+const formBtn = document.querySelector("[data-form-btn]");
+
+// 可以在这里修改表单验证规则
+```
+
+###### 作品集筛选功能（第50-100行）
+```javascript
+// 作品集分类筛选
+const filterFunc = function (selectedValue) {
+  // 可以在这里添加新的分类
+  // 例如：data-category="mobile-app"
+}
+```
+
+### 🎨 样式自定义详细指南
+
+#### 1. 修改颜色主题
+```css
+/* 在 style.css 的 :root 部分修改 */
+:root {
+  /* 蓝色主题 */
+  --orange-yellow-crayola: hsl(210, 100%, 70%);
+  --vegas-gold: hsl(210, 80%, 60%);
+  
+  /* 绿色主题 */
+  --orange-yellow-crayola: hsl(120, 100%, 70%);
+  --vegas-gold: hsl(120, 80%, 60%);
+  
+  /* 紫色主题 */
+  --orange-yellow-crayola: hsl(270, 100%, 70%);
+  --vegas-gold: hsl(270, 80%, 60%);
+}
+```
+
+#### 2. 修改字体
+```html
+<!-- 在 index.html 的 head 部分修改 -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+```
+
+```css
+/* 在 style.css 中修改 */
+:root {
+  --ff-poppins: 'Roboto', sans-serif;
+}
+```
+
+#### 3. 修改布局
+```css
+/* 修改侧边栏宽度 */
+.sidebar {
+  width: 350px; /* 默认是 300px */
+}
+
+/* 修改内容区域宽度 */
+.main-content {
+  width: calc(100% - 350px); /* 对应侧边栏宽度 */
+}
+
+/* 修改间距 */
+.sidebar, article {
+  padding: 20px; /* 默认是 15px */
+}
+```
+
+### 🔧 高级自定义
+
+#### 1. 添加新的页面部分
+```html
+<!-- 在 index.html 中添加新的导航项 -->
+<li class="navbar-item">
+  <button class="navbar-link" data-nav-link>新页面</button>
+</li>
+
+<!-- 添加对应的内容区域 -->
+<article class="new-page" data-page="new-page">
+  <header>
+    <h2 class="h2 article-title">新页面标题</h2>
+  </header>
+  <!-- 你的内容 -->
+</article>
+```
+
+#### 2. 添加新的交互功能
+```javascript
+// 在 script.js 中添加新功能
+const newFeature = function() {
+  // 你的自定义功能
+};
+
+// 绑定事件
+document.querySelector('.new-button').addEventListener('click', newFeature);
+```
+
+#### 3. 添加动画效果
+```css
+/* 在 style.css 中添加自定义动画 */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+```
+
+---
 
 ## 🎯 项目介绍
 
@@ -96,222 +485,6 @@
 1. 在项目根目录创建 `.github/workflows/deploy.yml` 文件
 2. 配置自动部署工作流
 3. 每次推送到main分支时自动部署
-
-## 📝 内容修改指南
-
-### 1. 个人信息修改
-
-#### 修改头像和基本信息
-编辑 `index.html` 文件中的侧边栏部分：
-
-```html
-<!-- 修改头像 -->
-<img src="./assets/images/my-avatar.png" alt="你的名字" width="80">
-
-<!-- 修改姓名和职位 -->
-<h1 class="name" title="你的名字">你的名字</h1>
-<p class="title">你的职位</p>
-```
-
-#### 修改联系信息
-```html
-<!-- 邮箱 -->
-<a href="mailto:your-email@example.com" class="contact-link">your-email@example.com</a>
-
-<!-- 电话 -->
-<a href="tel:+1234567890" class="contact-link">+1 (234) 567-890</a>
-
-<!-- 生日 -->
-<time datetime="1990-01-01">January 1, 1990</time>
-
-<!-- 地址 -->
-<address>你的城市，你的国家</address>
-```
-
-#### 修改社交媒体链接
-```html
-<li class="social-item">
-  <a href="https://github.com/your-username" class="social-link">
-    <ion-icon name="logo-github"></ion-icon>
-  </a>
-</li>
-```
-
-### 2. 关于我部分修改
-
-编辑 `index.html` 中的 "About me" 部分：
-
-```html
-<section class="about-text">
-  <p>
-    在这里写你的个人介绍...
-  </p>
-  <p>
-    继续写更多关于你的信息...
-  </p>
-</section>
-```
-
-#### 修改服务/技能部分
-```html
-<li class="service-item">
-  <div class="service-icon-box">
-    <img src="./assets/images/icon-dev.svg" alt="web development icon" width="40">
-  </div>
-  <div class="service-content-box">
-    <h4 class="h4 service-item-title">Web Development</h4>
-    <p class="service-item-text">
-      描述你的技能和服务...
-    </p>
-  </div>
-</li>
-```
-
-### 3. 简历部分修改
-
-#### 工作经验
-```html
-<li class="timeline-item">
-  <h4 class="h4 timeline-item-title">职位名称</h4>
-  <span>2020 — 2023</span>
-  <p class="timeline-text">
-    工作描述和成就...
-  </p>
-</li>
-```
-
-#### 教育背景
-```html
-<li class="timeline-item">
-  <h4 class="h4 timeline-item-title">学位名称</h4>
-  <span>2016 — 2020</span>
-  <p class="timeline-text">
-    学校名称和所学专业...
-  </p>
-</li>
-```
-
-#### 技能进度条
-```html
-<div class="skill-progress-bg">
-  <div class="skill-progress-fill" style="width: 90%"></div>
-</div>
-```
-
-### 4. 作品集部分修改
-
-#### 添加新项目
-```html
-<li class="project-item active" data-filter-item data-category="web development">
-  <a href="#">
-    <figure class="project-img">
-      <div class="project-item-icon-box">
-        <ion-icon name="eye-outline"></ion-icon>
-      </div>
-      <img src="./assets/images/project-1.jpg" alt="项目名称" loading="lazy">
-    </figure>
-    <h3 class="project-title">项目名称</h3>
-    <p class="project-category">Web Development</p>
-  </a>
-</li>
-```
-
-#### 项目分类
-- `data-category="web development"` - Web开发
-- `data-category="applications"` - 应用程序
-- `data-category="web design"` - Web设计
-
-### 5. 博客部分修改
-
-#### 添加博客文章
-```html
-<li class="blog-post-item">
-  <a href="#">
-    <figure class="blog-banner-box">
-      <img src="./assets/images/blog-1.jpg" alt="文章标题" loading="lazy">
-    </figure>
-    <div class="blog-content">
-      <div class="blog-meta">
-        <p class="blog-category">技术</p>
-        <span class="dot"></span>
-        <time datetime="2023-12-01">Dec 1, 2023</time>
-      </div>
-      <h3 class="h3 blog-item-title">文章标题</h3>
-      <p class="blog-text">
-        文章摘要...
-      </p>
-    </div>
-  </a>
-</li>
-```
-
-### 6. 联系表单修改
-
-联系表单目前是静态的，要使其功能化，你需要：
-
-1. **使用表单服务**（推荐）：
-   - [Formspree](https://formspree.io/)
-   - [Netlify Forms](https://www.netlify.com/docs/form-handling/)
-   - [Google Forms](https://www.google.com/forms/about/)
-
-2. **配置Formspree示例**：
-```html
-<form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form" data-form>
-  <div class="input-wrapper">
-    <input type="text" name="name" class="form-input" placeholder="Name" required data-form-input>
-    <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-  </div>
-  <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-  <button class="form-btn" type="submit" disabled data-form-btn>
-    <ion-icon name="paper-plane"></ion-icon>
-    <span>Send Message</span>
-  </button>
-</form>
-```
-
-## 🎨 自定义样式
-
-### 修改颜色主题
-
-编辑 `assets/css/style.css` 文件中的CSS变量：
-
-```css
-:root {
-  /* 主色调 */
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
-  
-  /* 背景色 */
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(0, 0%, 7%);
-  
-  /* 文字颜色 */
-  --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%);
-  --light-gray: hsl(0, 0%, 84%);
-}
-```
-
-### 修改字体
-
-1. **更改Google Fonts**：
-```html
-<link href="https://fonts.googleapis.com/css2?family=Your-Font:wght@300;400;500;600&display=swap" rel="stylesheet">
-```
-
-2. **更新CSS变量**：
-```css
-:root {
-  --ff-poppins: 'Your-Font', sans-serif;
-}
-```
-
-### 修改布局
-
-- **侧边栏宽度**：修改 `.sidebar` 的 `width` 属性
-- **内容区域**：修改 `.main-content` 的样式
-- **间距**：调整 `padding` 和 `margin` 值
 
 ## 📁 项目结构
 
