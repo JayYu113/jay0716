@@ -157,3 +157,20 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// 主题切换按钮逻辑
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+  // 初始化时根据 localStorage 设置主题
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+  }
+  themeToggle.addEventListener('click', function () {
+    document.body.classList.toggle('light-mode');
+    if (document.body.classList.contains('light-mode')) {
+      localStorage.setItem('theme', 'light');
+    } else {
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+}
