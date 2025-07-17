@@ -489,6 +489,8 @@ main {
   flex-shrink: 0;
 }
 
+body.light-mode #theme-toggle { color: var(--white-1); }
+
 .navbar-link {
   color: var(--light-gray);
   font-size: var(--fs-8);
